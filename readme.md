@@ -37,10 +37,12 @@
 [go back to home ][home]
 
 
-### how to enbale a site
+### how to enable a site
 
 ```
+    sudo a2ensite example.conf
 
+    sudo service apache2 reload
 ```
 [go back to home ][home]
 
@@ -48,7 +50,7 @@
 ### how to disable a site
 
 ```
-
+    sudo a2dissite example.conf
 ```
 [go back to home ][home]
 
