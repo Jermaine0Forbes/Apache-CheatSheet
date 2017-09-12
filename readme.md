@@ -79,10 +79,45 @@ sudo service apache2 reload
 [go back home][home]
 
 ### how to set up a reverse proxy
+**reference**
+- [how to use apache as a reverse proxy](https://www.digitalocean.com/community/tutorials/how-to-use-apache-as-a-reverse-proxy-with-mod_proxy-on-ubuntu-16-04)
 
+1. install all of these things
+```
+sudo a2enmod proxy
+sudo a2enmod proxy_http
+sudo a2enmod proxy_balancer
+sudo a2enmod lbmethod_byrequests
+
+ sudo service apache2 restart
+```
+2. update the server
+```
+sudo apt-get  update
+sudo apt-get -y upgrade
 ```
 
+3. create the conf file like this
 ```
+sudo nano /etc/apache2/sites-available/node.conf
+
+// inside node.conf file
+
+<VirtualHost *:80>
+ServerName node.com
+ProxyPreserveHost On
+
+ProxyPass / http://127.0.0.1:8080/
+ProxyPassReverse / http://127.0.0.1:8080/
+</VirtualHost>
+
+```
+4. enable the site
+```
+sudo a2ensite node.conf
+sudo service apache2 reload    
+```
+
 [go back to home ][home]
 
 ### how to create a load balancer
