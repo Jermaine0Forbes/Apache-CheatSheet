@@ -3,6 +3,10 @@
 
 ## how to
 
+[how to check the error logs of apache][apache-error]
+
+[how to see the status of the apache server][status-apache]
+
 [how to set up a reverse proxy][reverseP]
 
 [how to create a load balancer][loadB]
@@ -15,6 +19,8 @@
 
 [how to setup a local host file][local]
 
+[apache-error]:#how-to-check-the-error-logs-of-apache
+[status-apache]:#how-to-see-the-status-of-the-apache-server
 [local]:#how-to-setup-a-local-host-file
 [home]:#apache-cheatsheet
 [reverseP]:#how-to-set-up-a-reverse-proxy
@@ -22,6 +28,41 @@
 [enable]:#how-to-enable-a-site
 [disable]:#how-to-disable-a-site
 [virtual]:#how-to-create-a-virtual-host
+
+
+### how to check the error logs of apache
+
+<details>
+<summary>
+View Content
+</summary>
+
+
+```
+ sudo vim /var/log/apache2/error.log
+```
+</details>
+
+[go back :house:][home]
+
+
+### how to see the status of the apache server
+
+<details>
+<summary>
+View Content
+</summary>
+
+**references**
+- [3 Ways to Check Apache Server Status and Uptime in Linux](https://www.tecmint.com/check-apache-httpd-status-and-uptime-in-linux/)
+
+```
+sudo systemctl status apache2	
+```
+</details>
+
+[go back :house:][home]
+
 
 ## how to setup a local host file
 this is great for setting creating a websites or at least developing it without
