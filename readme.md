@@ -3,6 +3,8 @@
 
 ## how to
 
+[how to check the last lines of an access log][apache-access]
+
 [how to check the error logs of apache][apache-error]
 
 [how to see the status of the apache server][status-apache]
@@ -19,6 +21,7 @@
 
 [how to setup a local host file][local]
 
+[apache-access]:#how-to-check-the-last-lines-of-an-access-log
 [apache-error]:#how-to-check-the-error-logs-of-apache
 [status-apache]:#how-to-see-the-status-of-the-apache-server
 [local]:#how-to-setup-a-local-host-file
@@ -29,6 +32,28 @@
 [disable]:#how-to-disable-a-site
 [virtual]:#how-to-create-a-virtual-host
 
+
+### how to check the last lines of an access log
+
+<details>
+<summary>
+View Content
+</summary>
+
+:link: **Reference**
+- [How To Use Apache Access Log & Apache Error Log](https://www.a2hosting.com/kb/developer-corner/apache-web-server/viewing-apache-log-files)
+---
+
+In the terminal type this. This should get you the last 100 lines of the apache
+access log.
+
+```
+sudo tail -100 /var/log/apache2/access.log
+```
+
+</details>
+
+[go back :house:][home]
 
 ### how to check the error logs of apache
 
@@ -57,7 +82,7 @@ View Content
 - [3 Ways to Check Apache Server Status and Uptime in Linux](https://www.tecmint.com/check-apache-httpd-status-and-uptime-in-linux/)
 
 ```
-sudo systemctl status apache2	
+sudo systemctl status apache2
 ```
 </details>
 
